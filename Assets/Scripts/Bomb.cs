@@ -8,12 +8,13 @@ public class Bomb : MonoBehaviour
 {
 
     [SerializeField] private float fallSpeed;
+    public GameObject player;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject == player)
         {
-            Destroy(GameObject.FindWithTag("Player"));
+            Destroy(player);
         }
         Vector3 newPosition = RandomPointOnXZCircle(new Vector3(0, 10, 0), 3);
         Instantiate(gameObject, newPosition, Quaternion.identity);
