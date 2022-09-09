@@ -6,9 +6,10 @@ using UnityEngine;
 public class Pole : MonoBehaviour
 {
     public GameObject target;
+    public float spinSpeed;
 
     private void FixedUpdate()
     {
-        transform.RotateAround(target.transform.position, Vector3.up, -40 * Time.fixedDeltaTime);
+        transform.RotateAround(target.transform.position, Vector3.up, -spinSpeed * Time.fixedDeltaTime);
     }
 }

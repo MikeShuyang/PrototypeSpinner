@@ -57,6 +57,11 @@ public class Player : MonoBehaviour
                 isHoldingJump = true;
             }
         }
+
+        if (transform.position.y < 0)
+        {
+            isGrounded = false;
+        }
         
         if (Input.GetKeyUp(KeyCode.Space))
         {
