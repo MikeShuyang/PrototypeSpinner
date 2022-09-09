@@ -32,8 +32,11 @@ public class Player : MonoBehaviour
     
     private void OnCollisionExit(Collision other)
     {
-        // If the player is not colliding with anything, it's not grounded
-        isGrounded = false;
+        // If the player is not colliding with the platform, it's not grounded
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            isGrounded = false;
+        }
     }
 
     // Update is called once per frame

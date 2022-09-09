@@ -566,6 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 10
+  player: {fileID: 929497350}
 --- !u!54 &1195816809
 Rigidbody:
   m_ObjectHideFlags: 0
